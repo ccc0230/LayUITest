@@ -6,10 +6,13 @@
     <title>layout 后台大布局 - Layui</title>
     <link rel="stylesheet" href="layui/css/layui.css">
 </head>
+<style>
+    #colcse li a:hover{background:#009688;color:#fff;}
+</style>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo">layui 后台布局</div>
+        <div class="layui-logo" >layui 后台布局</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="">控制台</a></li>
@@ -42,19 +45,25 @@
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
                 <li class="layui-nav-item layui-nav-itemed">
                     <a class="" href="javascript:;">所有商品</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="#" data-url="https://www.baidu.com/" data-title="百度" data-id="11"
-                               class="site-demo-active" datatype="tabAdd">百度</a></dd>
-                        <dd><a href="#" data-url="https://www.huya.com/" data-title="虎牙" data-id="22"
-                               class="site-demo-active" datatype="tabAdd">虎牙直播</a></dd>
-                        <dd><a href="#" data-url="https://www.kankanwu.com/" data-title="看看屋" data-id="33"
-                               class="site-demo-active" datatype="tabAdd">看看屋</a></dd>
+                        <dd>
+                            <a data-url="https://www.baidu.com" data-id="99" data-title="百度" href="#" class="site-demo-active"    data-type="tabAdd">百度</a>
+                        </dd>
+                        <dd>
+                            <a data-url="https://www.qq.com"  data-id="88" data-title="QQ" href="#" class="site-demo-active"    data-type="tabAdd">QQ</a>
+                        </dd>
+                        <dd>
+                            <a data-url="https://www.kankanwu.com" data-id="77" data-title="看看屋" href="#" class="site-demo-active"    data-type="tabAdd">看看屋</a>
+                        </dd>
+                        <dd>
+                            <a data-url="https://www.layui.com/demo/table.html" data-id="66" data-title="LayUI" href="#" class="site-demo-active" data-type="tabAdd">LayUI示例</a>
+                        </dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item ">
                     <a href="javascript:;">解决方案</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;">列表一</a></dd>
@@ -68,83 +77,100 @@
         </div>
     </div>
 
-    <div class="layui-body">
+    <div class="layui-body" style="background-color: #FFFCF5;">
         <!-- 内容主体区域 -->
-        <#--        <div style="padding: 15px;">内容主体区域</div>-->
-        <#--        <iframe src="https://www.baidu.com/" frameborder="0" height="100%" width="100%"></iframe>-->
-        <div class="layui-tab" lay-filter="demo" lay-allowclose="true">
-            <ul class="layui-tab-title">
+        <div>
 
-            </ul>
-            <ul class="rightmenu" style=" display: none;position: absolute;background: #6E6C79;font-family: '微软雅黑';">
-                <li id="yue" style="color: red;cursor:pointer;" data-type="closethis">
-                    <a href="#" style="color: white;cursor:pointer;" data-type="closethis"> &nbsp;&nbsp;关闭当前&nbsp;&nbsp;</a>
-                </li>
+            <div id="colcse" class="layui-tab" lay-filter="demo" lay-allowclose="true" >
+                <ul class="layui-tab-title">
+                    <!--
+                        作者：1669056669@qq.com
+                        时间：2018-12-24
+                        描述：存放tab
+                    -->
+                </ul>
+                <!--
+                    作者：1669056669@qq.com
+                    时间：2018-12-24
+                    描述：tab右键功能
+                -->
+                <ul class="rightmenu" style=" display: none;position: absolute;background: #6E6C79;font-family: '微软雅黑';">
+                    <li id="yue" style="color: red;cursor:pointer;" data-id="" data-type="closethis">
+                        <a href="#" id="colcse" style="color: white;cursor:pointer;"  data-type="closethis"  >     关闭当前  </a>
+                    </li>
 
-                <li data-type="closeall">
-                    <a href="#" style="color: white;cursor:pointer;" data-type="closeall">&nbsp;&nbsp;关闭所有&nbsp;&nbsp;</a>
-                </li>
+                    <li data-type="closeall">
+                        <a href="#" id="colcse" style="color: white;cursor:pointer;" data-id=""  data-type="closeall">  关闭所有  </a>
+                    </li>
 
-                <li data-type="closeothe">
-                    <a href="#" style="color: white;cursor:pointer;" data-type="closeothe">&nbsp;&nbsp;关闭其它&nbsp;&nbsp;</a>
-                </li>
-            </ul>
-            <div class="layui-tab-content">
-
+                    <li data-type="closeothe">
+                        <a href="#" id="colcse" style="color: white;cursor:pointer;" data-id=""  data-type="closeothe">  关闭其它  </a>
+                    </li>
+                </ul>
+                <div class="layui-tab-content">
+                </div>
             </div>
+
         </div>
+    </div>
+
+    <div id="test1" data-id = "test" class="layui-panel-window">
+        <input class="layui-table-box" title="9999999" />
     </div>
 
     <div class="layui-footer">
         <!-- 底部固定区域 -->
-        © layui.com - 底部固定区域
+        ©layui - 底部固定区域
     </div>
+
 </div>
-<script src="layui/layui.js"></script>
+<script src="layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script>
-    //JavaScript代码区域
-    layui.use('element', function () {
-        var $ = layui.jquery;
-        var element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+    var ids=0;
+    layui.use('element', function(){
+        var $ = layui.jquery
+            ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
 
         //触发事件
         var active = {
-            //在这里给active绑定几项事件，后面可通过active调用这些事件
-            tabAdd: function (url, id, name) {
+            tabAdd:function(url,id,name){
                 //新增一个Tab项 传入三个参数，分别对应其标题，tab页面的地址，还有一个规定的id，是标签中data-id的属性值
                 //关于tabAdd的方法所传入的参数可看layui的开发文档中基础方法部分
                 element.tabAdd('demo', {
                     title: name,
-                    content: '<iframe data-frameid="' + id + '" scrolling="auto" frameborder="0" src="' + url + '" style="width:100%;height:99%;"></iframe>',
+                    content: '<iframe data-frameid="'+id+'" scrolling="auto" frameborder="0" src="'+url+'" style="width:100%;height:99%;"></iframe>',
                     id: id //规定好的id
                 })
-                //CustomRightClick(id); //给tab绑定右击事件,有些bug，暂时去掉
+                CustomRightClick(id); //给tab绑定右击事件
                 FrameWH();  //计算ifram层的大小
-            },
-            tabChange: function (id) {
-                //切换到指定Tab项
-                element.tabChange('demo', id); //根据传入的id传入到指定的tab项
-            },
-            tabDelete: function (id) {
-                element.tabDelete("demo", id);//删除
-                alert("data-id: " + id)
             }
-            , tabDeleteAll: function (ids) {//删除所有
-                $.each(ids, function (i, item) {
-                    element.tabDelete("demo", item); //ids是一个数组，里面存放了多个id，调用tabDelete方法分别删除
-                })
+            ,tabDelete: function(id){
+                //删除指定Tab项
+
+                element.tabDelete('demo', id); //删除：“商品管理”
+                ids=0;
+                //othis.addClass('layui-btn-disabled'); 添加样式
+            },tabDeleteAll: function(idss){
+                $.each(idss, function(i,item) {
+                    element.tabDelete('demo', item); //删除所有
+                });
+                ids =0;
+            }
+            ,tabChange: function(id){
+                //切换到指定Tab项
+                element.tabChange('demo', id); //切换到：用户管理
             }
         };
 
-
         //当点击有site-demo-active属性的标签时，即左侧菜单栏中内容 ，触发点击事件
-        $('.site-demo-active').on('click', function () {
+        $('.site-demo-active').on('click', function() {
             var dataid = $(this);
-
             //这时会判断右侧.layui-tab-title属性下的有lay-id属性的li的数目，即已经打开的tab项数目
             if ($(".layui-tab-title li[lay-id]").length <= 0) {
                 //如果比零小，则直接打开新的tab项
-                active.tabAdd(dataid.attr("data-url"), dataid.attr("data-id"), dataid.attr("data-title"));
+                active.tabAdd(dataid.attr("data-url"), dataid.attr("data-id"),dataid.attr("data-title"));
             } else {
                 //否则判断该tab项是否以及存在
 
@@ -157,43 +183,63 @@
                 })
                 if (isData == false) {
                     //标志为false 新增一个tab项
-                    active.tabAdd(dataid.attr("data-url"), dataid.attr("data-id"), dataid.attr("data-title"));
+                    active.tabAdd(dataid.attr("data-url"), dataid.attr("data-id"),dataid.attr("data-title"));
                 }
             }
             //最后不管是否新增tab，最后都转到要打开的选项页面上
             active.tabChange(dataid.attr("data-id"));
         });
+        //Hash地址的定位
+        var layid = location.hash.replace(/^#test=/, '');
+        element.tabChange('test', layid);
+
+        element.on('tab(test)', function(elem){
+            location.hash = 'test='+ $(this).attr('lay-id');
+        });
+
+        function FrameWH() {
+            var h = $(window).height() -41- 10 - 60 -10-44 -10;
+            $("iframe").css("height",h+"px");
+        }
+
+        $(window).resize(function () {
+            FrameWH();
+        })
 
 
-        //以下是关于右击事件的方法，方法可能有问题
         function CustomRightClick(id) {
             //取消右键  rightmenu属性开始是隐藏的 ，当右击的时候显示，左击的时候隐藏
-            $('.layui-tab-title li').on('contextmenu', function () {
-                return false;
-            })
+            $('.layui-tab-title li').on('contextmenu', function () { return false; })
             $('.layui-tab-title,.layui-tab-title li').click(function () {
                 $('.rightmenu').hide();
+                ids=0;
             });
+
             //桌面点击右击
             $('.layui-tab-title li').on('contextmenu', function (e) {
+
                 var popupmenu = $(".rightmenu");
-                popupmenu.find("li").attr("data-id", id); //在右键菜单中的标签绑定id属性
+                ids +=1;
+                if(ids >1){
+                    return true;
+                }
+                popupmenu.find("li").attr("data-id",id); //在右键菜单中的标签绑定id属性
 
                 //判断右侧菜单的位置
                 l = ($(document).width() - e.clientX) < popupmenu.width() ? (e.clientX - popupmenu.width()) : e.clientX;
                 t = ($(document).height() - e.clientY) < popupmenu.height() ? (e.clientY - popupmenu.height()) : e.clientY;
-                popupmenu.css({left: l - 200, top: t - 60}).show(); //进行绝对定位
+
+                popupmenu.css({ left: l-190, top: t-50 }).show(); //进行绝对定位
                 //alert("右键菜单")
                 return false;
             });
         }
-
         $(".rightmenu li").click(function () {
-
             //右键菜单中的选项被点击之后，判断type的类型，决定关闭所有还是关闭当前。
             if ($(this).attr("data-type") == "closethis") {
                 //如果关闭当前，即根据显示右键菜单时所绑定的id，执行tabDelete
-                active.tabDelete($(this).attr("data-id"))
+
+                active.tabDelete($(this).attr("data-id"));
             } else if ($(this).attr("data-type") == "closeall") {
                 var tabtitle = $(".layui-tab-title li");
                 var ids = new Array();
@@ -202,12 +248,12 @@
                 })
                 //如果关闭所有 ，即将所有的lay-id放进数组，执行tabDeleteAll
                 active.tabDeleteAll(ids);
-            } else if ($(this).attr("data-type") == "closeothe") {
-                var id = $(this).attr("data-id");
+            }else if($(this).attr("data-type") =="closeothe"){
+                var id =$(this).attr("data-id");
                 var tabtitle = $(".layui-tab-title li");
                 var ids = new Array();
                 $.each(tabtitle, function (i) {
-                    if (id != $(this).attr("lay-id")) {
+                    if(id != $(this).attr("lay-id")){
                         ids[i] = $(this).attr("lay-id");
                     }
                 })
@@ -217,14 +263,6 @@
             $('.rightmenu').hide(); //最后再隐藏右键菜单
         })
 
-        function FrameWH() {
-            var h = $(window).height() - 41 - 10 - 60 - 10 - 44 - 10;
-            $("iframe").css("height", h + "px");
-        }
-
-        $(window).resize(function () {
-            FrameWH();
-        })
     });
 </script>
 </body>
