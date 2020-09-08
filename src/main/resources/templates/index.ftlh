@@ -50,7 +50,10 @@
                     <a class="" href="javascript:;">所有商品</a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a data-url="https://www.baidu.com" data-id="99" data-title="百度" href="#" class="site-demo-active"    data-type="tabAdd">百度</a>
+                            <a data-url="demo1" data-id="99" data-title="demo1" href="#" class="site-demo-active"    data-type="tabAdd">demo1</a>
+                        </dd>
+                        <dd>
+                            <a data-url="demo2" data-id="00" data-title="demo2" href="#" class="site-demo-active"    data-type="tabAdd">demo2</a>
                         </dd>
                         <dd>
                             <a data-url="https://www.qq.com"  data-id="88" data-title="QQ" href="#" class="site-demo-active"    data-type="tabAdd">QQ</a>
